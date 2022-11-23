@@ -155,4 +155,3 @@ tool.
 
 If you implement task D, add the functionality to your program  and
 run from main. Test via doctest as usual.
-

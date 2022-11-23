@@ -5,6 +5,7 @@
 //TASK C
 
 Network::Network(){
+    numUsers = 0;
     for (int y = 0; y < MAX_USERS; y++){
         for (int x = 0; x < MAX_USERS; x++){
             following[y][x] = false;
@@ -23,13 +24,13 @@ bool Network::follow(std::string usrn1, std::string usrn2){
 void Network::printDot(){
     std::cout << "digraph {\n";
     for (int i = 0; i < numUsers; i++){
-        std::cout << "\"@" << profiles[i].getUsername() << "\"\n";
+        std::cout << "  \"@" << profiles[i].getUsername() << "\"\n";
     }
     std::cout << '\n';
-    for (int y = 0; y < MAX_USERS; y++){
-        for (int x = 0; x < MAX_USERS; x++){
+    for (int y = 0; y < numUsers; y++){
+        for (int x = 0; x < numUsers; x++){
             if (following[y][x] == true){
-                std::cout << "\"@" << profiles[y].getUsername() << "\" -> \"" << profiles[x].getUsername() << "\"\n";
+                std::cout << "  \"@" << profiles[y].getUsername() << "\" -> \"@" << profiles[x].getUsername() << "\"\n";
             }
         }
     }

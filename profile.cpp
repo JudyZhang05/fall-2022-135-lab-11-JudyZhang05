@@ -20,6 +20,10 @@ Profile::Profile(std::string usrn, std::string dspn){
     displayname = dspn;
 }
 
+Profile::Profile(){
+    username = "";
+    displayname = "";
+}
 //USAGE EX
 // int main() {
 //     Profile p1("marco", "Marco");    

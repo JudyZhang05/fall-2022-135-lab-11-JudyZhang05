@@ -1,7 +1,7 @@
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include "doctest.h"
-#include "profile.h"
-#include "network.h"
+#include "profile.hpp"
+#include "network.hpp"
 
 Profile example("Exam","Please");
 Profile example2("Nothing","Here");

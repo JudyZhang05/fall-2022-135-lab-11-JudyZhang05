@@ -17,3 +17,4 @@ social3.o: social3.cpp network.hpp profile.hpp
 
 clean:
 	rm -f *o
+	
